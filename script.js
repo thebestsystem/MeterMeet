@@ -116,6 +116,9 @@ class MeterMeet {
     }
     
     init() {
+        // Initialize particle system
+        this.initializeParticles();
+        
         // Initialize theme
         this.initializeTheme();
         
@@ -158,6 +161,17 @@ class MeterMeet {
         this.calculateCosts();
         this.updateTimerDisplay();
         this.updateCurrencyDisplay();
+    }
+    
+    // Particle System Integration
+    initializeParticles() {
+        // Initialize particles after a short delay to ensure DOM is ready
+        setTimeout(() => {
+            if (typeof window.initParticleSystem === 'function') {
+                window.initParticleSystem();
+                this.particlesInitialized = true;
+            }
+        }, 100);
     }
     
     calculateCosts() {
@@ -207,6 +221,11 @@ class MeterMeet {
         // Store current rates for timer
         this.currentCostPerSecond = costPerSecond;
         this.currentTotalCost = totalCost;
+        
+        // Update particle system with new cost
+        if (this.particlesInitialized && typeof window.updateParticleCost === 'function') {
+            window.updateParticleCost(totalCost);
+        }
         
         // Update timer cost if running
         if (this.state.timer.isRunning || this.state.timer.elapsedTime > 0) {
@@ -430,6 +449,11 @@ class MeterMeet {
                 this.totalCostDisplay.parentElement.classList.remove('pulse-animation');
             }, 600);
             
+            // Trigger particle burst effect
+            if (this.particlesInitialized && typeof window.triggerCostBurst === 'function') {
+                window.triggerCostBurst(milestone);
+            }
+            
             // Update progress milestones
             this.updateProgressMilestones(cost);
             
@@ -592,6 +616,7 @@ class MeterMeet {
         
         // Add visual feedback
         this.timerDisplay.classList.add('timer-pulse');
+        document.querySelector('.timer-section').classList.add('timer-active');
         this.showNotification('Timer started', 'success');
     }
     
@@ -616,6 +641,7 @@ class MeterMeet {
         
         // Remove visual feedback
         this.timerDisplay.classList.remove('timer-pulse');
+        document.querySelector('.timer-section').classList.remove('timer-active');
         this.showNotification('Timer paused', 'info');
     }
     
@@ -651,6 +677,7 @@ class MeterMeet {
         
         // Remove visual feedback
         this.timerDisplay.classList.remove('timer-pulse');
+        document.querySelector('.timer-section').classList.remove('timer-active');
         
         // Hide alert if cost is reset
         this.hideAlert();
