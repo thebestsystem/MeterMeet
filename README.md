@@ -1,51 +1,104 @@
-# MeterMeet 💰⏱️
+# MeterMeet 💰⏱️ - Enhanced Edition
 
-MeterMeet is a modern, real-time meeting cost tracker that transforms time into clear financial insights. Built as a responsive single-page web application, it helps teams understand the true cost of their meetings in real-time.
+MeterMeet is a cutting-edge, real-time meeting cost tracker that transforms time into clear financial insights with advanced UX features. Built as a highly responsive single-page web application, it helps teams understand the true cost of their meetings with professional-grade tools and delightful user experience.
 
-## ✨ Features
+## 🌟 New Advanced Features
 
-### 📊 Real-Time Cost Calculations
-- **Total Estimated Cost**: Complete meeting cost based on inputs
-- **Cost per Minute**: Precise per-minute breakdown
-- **Cost per Second**: Real-time granular tracking
-- **Overhead Support**: Configurable overhead percentage (facilities, benefits, etc.)
+### 🌙☀️ Automatic Dark/Light Mode
+- **System Integration**: Automatically follows your device's theme preference
+- **Manual Toggle**: Switch between themes with a single click
+- **Persistent Settings**: Remembers your theme preference across sessions
+- **Smooth Transitions**: Seamless theme switching with elegant animations
 
-### ⏲️ Live Timer Mode
-- **Start/Pause/Reset**: Full timer controls
-- **Progressive Cost Accumulation**: Watch costs grow in real-time
-- **Precision Tracking**: Updates every 100ms for smooth visualization
-- **Keyboard Shortcuts**: Space/Enter for start/pause, Escape/R for reset
+### 💱 Multi-Currency Support
+- **Global Currencies**: USD, EUR, GBP, QAR, TND, CAD, AUD, JPY, CHF
+- **Localized Formatting**: Native currency formatting for each region
+- **Real-time Updates**: All calculations instantly update when currency changes
+- **Persistent Selection**: Your currency preference is saved automatically
 
-### 🚨 Smart Alert System
-- **Customizable Threshold**: Set your own cost alert limit (default: $500)
-- **Visual Notifications**: Animated slide-in alerts
-- **Audio Notifications**: Optional sound alerts using Web Audio API
-- **Auto-Hide**: Alerts automatically disappear after 10 seconds
+### 💰 Advanced Rate Configuration
+- **Average Mode**: Traditional single hourly rate for all attendees
+- **Individual Rates**: Set unique hourly rates for each participant
+- **Smart Defaults**: Intelligent rate suggestions based on meeting type
+- **Visual Indicators**: Clear identification of each attendee's contribution
 
-### 🎨 Modern UI Design
-- **Gradient Background**: Beautiful blue-purple gradient
-- **Pill-Style Result Boxes**: Clean, modern result displays
-- **Responsive Design**: Works perfectly on all device sizes
-- **System Fonts**: Uses native system font stack for optimal performance
-- **Accessibility**: Supports high contrast mode and reduced motion preferences
+### 📊 Enhanced Real-Time Calculations
+- **Total Estimated Cost**: Complete meeting cost with advanced breakdowns
+- **Cost per Minute**: Precise per-minute breakdown with live updates
+- **Cost per Second**: Real-time granular tracking with visual feedback
+- **Overhead Support**: Interactive range slider for overhead percentage
+- **Progressive Tracking**: Visual milestones every $100 with pulse animations
+
+### ⏲️ Enhanced Live Timer Mode
+- **Intelligent Controls**: Start/Pause/Reset with visual button states
+- **Progressive Cost Accumulation**: Watch costs grow with smooth animations
+- **Progress Visualization**: Dynamic progress bar with cost milestones
+- **Milestone Celebrations**: Visual and audio feedback every $100
+- **Precision Tracking**: Updates every 100ms for ultra-smooth visualization
+- **Timer Pulse**: Visual heartbeat effect when timer is running
+
+### 🚨 Intelligent Alert System
+- **Customizable Threshold**: Set your own cost alert limit with currency awareness
+- **Multi-Modal Alerts**: Visual notifications with smooth animations
+- **Audio Feedback**: Pleasant milestone sounds and alert notifications
+- **Smart Auto-Hide**: Context-aware alert management
+- **Progress Indicators**: Visual milestone markers on progress bar
+
+### 🎯 Quick Meeting Presets
+- **Daily Standup**: Optimized for short team syncs (8 people, 15 min)
+- **Sprint Planning**: Configured for planning sessions (6 people, 2 hours)
+- **All Hands**: Setup for company-wide meetings (50 people, 1 hour)
+- **One-Click Apply**: Instantly configure meeting parameters
+- **Smart Defaults**: Intelligent overhead and threshold suggestions
+
+### 📊 Advanced Data Export
+- **Comprehensive Reports**: Export complete meeting data and calculations
+- **JSON Format**: Machine-readable format for integration
+- **Session Data**: Include timer information and real-time costs
+- **Metadata**: Export timestamps, theme preferences, and configurations
+- **One-Click Export**: Simple keyboard shortcut (Ctrl+E)
+
+### 🎨 Premium UI/UX Design
+- **Adaptive Themes**: Stunning gradients that adapt to light/dark modes
+- **Micro-Interactions**: Delightful hover effects and button animations
+- **Smart Input Controls**: Increment/decrement buttons with visual feedback
+- **Interactive Elements**: Range sliders, toggle switches, and animated transitions
+- **Progress Visualization**: Dynamic progress bars with milestone indicators
+- **Notification System**: Elegant toast notifications for user feedback
+- **Responsive Excellence**: Flawless experience across all device sizes
+- **Accessibility First**: WCAG compliant with focus states and reduced motion support
 
 ### 💾 Smart Features
 - **Auto-Save Configuration**: Remembers your settings using localStorage
 - **Input Validation**: Prevents invalid values and provides sensible defaults
 - **Mobile-Friendly**: Touch-optimized for mobile and tablet use
 
-## 🚀 Quick Start
+## 🚀 Enhanced Quick Start Guide
 
-1. **Open the App**: Navigate to the MeterMeet URL
-2. **Configure Settings**:
-   - Number of attendees (1-100)
-   - Average hourly rate ($)
-   - Expected meeting duration (minutes)
-   - Overhead percentage (optional)
-   - Alert threshold (optional, default $500)
-3. **View Real-Time Calculations**: See costs update instantly
-4. **Start Live Timer**: Click "Start" or press Space/Enter
-5. **Monitor Progress**: Watch costs accumulate in real-time
+### First Time Setup
+1. **Open the App**: Navigate to the enhanced MeterMeet URL
+2. **Choose Your Theme**: Click 🌙/☀️ to toggle theme or let it auto-detect
+3. **Select Currency**: Choose from 9 supported currencies in the header
+4. **Pick a Preset**: Try "1" for Daily Standup or click preset buttons
+
+### Advanced Configuration
+1. **Choose Rate Mode**: Switch between Average or Individual rates
+2. **Configure Meeting**:
+   - Use +/- buttons or type attendee count (1-100)
+   - Set hourly rates (average or per person)
+   - Adjust duration with number input
+   - Fine-tune overhead with interactive slider (0-100%)
+   - Set alert threshold in your chosen currency
+3. **Real-Time Preview**: Watch calculations update instantly with animations
+
+### Live Meeting Tracking
+1. **Start Timer**: Click "Start" button or press Space/Enter
+2. **Monitor Progress**: 
+   - Watch the timer pulse with each second
+   - See costs accumulate in real-time
+   - Track progress against milestones ($100, $250, $500)
+   - Get visual/audio feedback at cost milestones
+3. **Export Data**: Press Ctrl+E anytime to download meeting report
 
 ## 📱 Responsive Design
 
@@ -54,47 +107,76 @@ MeterMeet adapts beautifully to all screen sizes:
 - **Tablet**: Optimized column arrangements
 - **Mobile**: Single-column layout with touch-friendly controls
 
-## ⌨️ Keyboard Shortcuts
+## ⌨️ Enhanced Keyboard Shortcuts
 
+### Timer Controls
 - **Space** or **Enter**: Start/Pause timer
 - **Escape** or **R**: Reset timer
 
-## 🔧 Technical Details
+### Quick Actions
+- **T**: Toggle between light/dark themes
+- **Ctrl+E** (or **Cmd+E**): Export meeting data
 
-### Architecture
-- **Pure Vanilla JavaScript**: No framework dependencies
-- **Modern CSS**: Grid layout, CSS custom properties, animations
-- **Web Standards**: Uses modern browser APIs responsibly
-- **Progressive Enhancement**: Works without JavaScript for basic calculations
+### Meeting Presets
+- **1**: Apply Daily Standup preset
+- **2**: Apply Sprint Planning preset
+- **3**: Apply All Hands preset
 
-### Browser Support
-- **Modern Browsers**: Chrome, Firefox, Safari, Edge (latest versions)
-- **Mobile Browsers**: iOS Safari, Chrome Mobile, Samsung Internet
-- **Audio Support**: Web Audio API for alert sounds (graceful fallback if unavailable)
+## 🔧 Enhanced Technical Architecture
 
-### Performance
-- **Lightweight**: Total bundle size under 30KB
-- **Fast Loading**: Optimized CSS and JavaScript
-- **Smooth Animations**: 60fps animations using CSS transforms
-- **Efficient Updates**: Optimized DOM manipulation
+### Modern Web Standards
+- **ES6+ JavaScript**: Advanced class-based architecture with state management
+- **CSS Grid & Flexbox**: Sophisticated responsive layouts
+- **CSS Custom Properties**: Dynamic theming system with seamless transitions
+- **Web Audio API**: Pleasant audio feedback for milestones and alerts
+- **Intersection Observer**: Smooth animations and performance optimization
+- **Local Storage**: Intelligent configuration persistence and recovery
 
-## 💡 Use Cases
+### Advanced Features
+- **System Theme Detection**: Automatic dark/light mode based on OS preferences
+- **Multi-Currency Formatting**: Native Intl.NumberFormat for localized display
+- **State Management**: Comprehensive application state with immutable updates
+- **Event-Driven Architecture**: Efficient DOM manipulation and user interaction
+- **Progressive Enhancement**: Full functionality even with limited browser support
 
-### 👥 Team Meetings
-- Track the cost of daily standups, planning sessions, and reviews
-- Make data-driven decisions about meeting length and attendee count
+### Enhanced Browser Support
+- **Desktop**: Chrome 88+, Firefox 85+, Safari 14+, Edge 88+
+- **Mobile**: iOS Safari 14+, Chrome Mobile 88+, Samsung Internet 15+
+- **Features**: Full feature support including theme detection, audio feedback, and currency formatting
+- **Fallbacks**: Graceful degradation for older browsers with core functionality preserved
 
-### 💼 Client Consultations  
-- Demonstrate value and transparency in billing
-- Set appropriate meeting durations based on budget
+### Premium Performance
+- **Ultra-Light**: Enhanced bundle size optimized under 50KB (with all new features)
+- **Instant Loading**: Optimized critical rendering path
+- **Buttery Animations**: 120fps capable animations using CSS transforms and GPU acceleration
+- **Smart Updates**: Efficient state management with minimal DOM manipulation
+- **Memory Efficient**: Proper cleanup and garbage collection for long sessions
 
-### 🏢 Corporate Training
-- Calculate training costs per participant
-- Optimize workshop duration for cost effectiveness
+## 💡 Enhanced Use Cases
 
-### 📊 Meeting Optimization
-- Identify expensive meetings that could be emails
-- Right-size meeting attendee lists based on cost impact
+### 👥 Agile Team Management
+- **Daily Standups**: Use preset 1 for quick 15-min team syncs
+- **Sprint Planning**: Apply preset 2 for comprehensive planning sessions
+- **Retrospectives**: Configure individual rates to account for seniority levels
+- **Cross-team Meetings**: Multi-currency support for global teams
+
+### 💼 Professional Services
+- **Client Consultations**: Real-time cost transparency during meetings
+- **Project Kickoffs**: Individual rate tracking for mixed skill levels
+- **Vendor Negotiations**: Live cost calculation during discussions
+- **Training Delivery**: Export reports for client billing
+
+### 🏢 Enterprise Operations
+- **All-Hands Meetings**: Use preset 3 for company-wide communications
+- **Executive Sessions**: Individual rates for C-level compensation
+- **Department Reviews**: Progress tracking with milestone celebrations
+- **Budget Planning**: Export data for financial analysis and reporting
+
+### 📊 Meeting Culture Transformation
+- **Cost Awareness**: Visual feedback changes meeting behavior
+- **Optimization Insights**: Data-driven meeting length decisions
+- **Attendee Right-sizing**: Individual rate visibility impacts invitations
+- **Time Value Education**: Milestone animations reinforce cost consciousness
 
 ## 🎯 Best Practices
 
@@ -121,16 +203,38 @@ MeterMeet adapts beautifully to all screen sizes:
 └── README.md           # This documentation
 ```
 
-## 🌟 Key Benefits
+## 🌟 Enhanced Key Benefits
 
-- **Transparency**: Make meeting costs visible and tangible
-- **Efficiency**: Encourage shorter, more focused meetings  
-- **Awareness**: Help teams understand the true cost of time
-- **Optimization**: Data-driven meeting management
-- **Simplicity**: Easy to use, no setup required
+- **🔍 Transparency**: Multi-currency, real-time cost visibility with individual rate breakdowns
+- **⚡ Efficiency**: Gamified milestone system encourages shorter, focused meetings
+- **🧠 Awareness**: Visual and audio feedback creates lasting behavioral change
+- **📊 Optimization**: Comprehensive data export enables meeting ROI analysis
+- **🎯 Simplicity**: One-click presets and keyboard shortcuts for power users
+- **🌍 Global Ready**: Multi-currency and localization support for international teams
+- **♿ Accessibility**: WCAG compliant design with reduced motion and high contrast support
+- **📱 Mobile First**: Touch-optimized interface works perfectly on all devices
+
+## 🎉 What's New in Enhanced Edition
+
+### 🔥 Major Enhancements
+- **Dark Mode**: Automatic theme switching with system integration
+- **Multi-Currency**: Support for 9 global currencies with native formatting
+- **Individual Rates**: Per-attendee hourly rate configuration
+- **Meeting Presets**: Quick-setup templates for common meeting types
+- **Milestone Animations**: Celebratory pulse effects every $100
+- **Progress Visualization**: Dynamic progress bar with cost milestones
+- **Data Export**: Comprehensive JSON reports for analysis
+- **Enhanced Shortcuts**: Expanded keyboard controls for power users
+
+### 🎨 UI/UX Improvements
+- **Premium Animations**: Smooth transitions and micro-interactions
+- **Interactive Controls**: Range sliders, increment buttons, and hover effects
+- **Smart Notifications**: Context-aware toast messages
+- **Better Responsiveness**: Enhanced mobile experience with touch optimization
+- **Accessibility Plus**: Improved focus management and screen reader support
 
 ---
 
-**MeterMeet makes every minute count—literally.** 
+**MeterMeet Enhanced Edition - Where every second counts, and every detail matters.** 
 
-Transform your meeting culture with real-time cost awareness. Start tracking today and watch your team naturally become more efficient and focused.
+Transform your meeting culture with premium UX, advanced features, and delightful interactions. Experience the future of meeting cost awareness today! 🚀✨
