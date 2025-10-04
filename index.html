@@ -9,36 +9,118 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1 class="title">MeterMeet</h1>
-            <p class="subtitle">Turn meeting time into clear numbers</p>
+            <div class="header-top">
+                <div class="logo-section">
+                    <h1 class="title">MeterMeet</h1>
+                    <p class="subtitle">Turn meeting time into clear numbers</p>
+                </div>
+                <div class="header-controls">
+                    <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <div class="currency-selector">
+                        <select id="currencySelect" title="Select currency">
+                            <option value="USD">$ USD</option>
+                            <option value="EUR">€ EUR</option>
+                            <option value="GBP">£ GBP</option>
+                            <option value="QAR">ر.ق QAR</option>
+                            <option value="TND">د.ت TND</option>
+                            <option value="CAD">C$ CAD</option>
+                            <option value="AUD">A$ AUD</option>
+                            <option value="JPY">¥ JPY</option>
+                            <option value="CHF">Fr CHF</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <main class="main-content">
             <!-- Input Section -->
             <section class="input-section">
-                <div class="input-group">
-                    <label for="attendees">Number of Attendees</label>
-                    <input type="number" id="attendees" value="5" min="1" max="100">
+                <div class="section-header">
+                    <h2>Meeting Configuration</h2>
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-preset="standup">Daily Standup</button>
+                        <button class="preset-btn" data-preset="planning">Sprint Planning</button>
+                        <button class="preset-btn" data-preset="allhands">All Hands</button>
+                    </div>
                 </div>
 
-                <div class="input-group">
-                    <label for="hourlyRate">Average Hourly Rate ($)</label>
-                    <input type="number" id="hourlyRate" value="75" min="1" step="0.01">
-                </div>
+                <div class="input-grid">
+                    <div class="input-group">
+                        <label for="attendees">
+                            <span class="label-text">Number of Attendees</span>
+                            <span class="label-icon">👥</span>
+                        </label>
+                        <div class="input-wrapper">
+                            <input type="number" id="attendees" value="5" min="1" max="100">
+                            <div class="input-buttons">
+                                <button type="button" class="input-btn decrement" data-target="attendees">-</button>
+                                <button type="button" class="input-btn increment" data-target="attendees">+</button>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="input-group">
-                    <label for="duration">Expected Duration (minutes)</label>
-                    <input type="number" id="duration" value="60" min="1" max="480">
-                </div>
+                    <div class="input-group">
+                        <label for="rateMode">
+                            <span class="label-text">Rate Configuration</span>
+                            <span class="label-icon">💰</span>
+                        </label>
+                        <div class="rate-mode-toggle">
+                            <button type="button" id="avgRateBtn" class="rate-mode-btn active">Average Rate</button>
+                            <button type="button" id="individualRateBtn" class="rate-mode-btn">Individual Rates</button>
+                        </div>
+                    </div>
 
-                <div class="input-group">
-                    <label for="overhead">Overhead (%)</label>
-                    <input type="number" id="overhead" value="20" min="0" max="100" step="0.1">
-                </div>
+                    <div class="input-group" id="averageRateGroup">
+                        <label for="hourlyRate">
+                            <span class="label-text">Average Hourly Rate</span>
+                            <span class="currency-symbol">$</span>
+                        </label>
+                        <input type="number" id="hourlyRate" value="75" min="1" step="0.01">
+                    </div>
 
-                <div class="input-group">
-                    <label for="alertThreshold">Alert Threshold ($)</label>
-                    <input type="number" id="alertThreshold" value="500" min="1" step="0.01">
+                    <div class="input-group" id="individualRatesGroup" style="display: none;">
+                        <label>
+                            <span class="label-text">Individual Rates</span>
+                            <span class="label-icon">👤</span>
+                        </label>
+                        <div id="individualRatesContainer">
+                            <!-- Individual rate inputs will be generated here -->
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="duration">
+                            <span class="label-text">Expected Duration</span>
+                            <span class="label-icon">⏱️</span>
+                        </label>
+                        <div class="duration-input">
+                            <input type="number" id="duration" value="60" min="1" max="480">
+                            <span class="duration-unit">minutes</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="overhead">
+                            <span class="label-text">Overhead</span>
+                            <span class="label-icon">📊</span>
+                        </label>
+                        <div class="range-input-wrapper">
+                            <input type="range" id="overheadRange" min="0" max="100" value="20" step="1">
+                            <input type="number" id="overhead" value="20" min="0" max="100" step="0.1">
+                            <span class="range-label">%</span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="alertThreshold">
+                            <span class="label-text">Alert Threshold</span>
+                            <span class="label-icon">🚨</span>
+                        </label>
+                        <input type="number" id="alertThreshold" value="500" min="1" step="0.01">
+                    </div>
                 </div>
             </section>
 
@@ -63,14 +145,49 @@
             <!-- Timer Section -->
             <section class="timer-section">
                 <div class="timer-display">
-                    <span class="timer-value" id="timerDisplay">00:00:00</span>
-                    <span class="timer-cost" id="timerCost">$0.00</span>
+                    <div class="timer-info">
+                        <span class="timer-label">Meeting Duration</span>
+                        <span class="timer-value" id="timerDisplay">00:00:00</span>
+                    </div>
+                    <div class="cost-display">
+                        <span class="cost-label">Current Cost</span>
+                        <span class="timer-cost" id="timerCost">$0.00</span>
+                        <div class="cost-breakdown">
+                            <span class="cost-breakdown-item" id="costBreakdown">
+                                <span id="costPerSecondLive">$0.00</span>/sec
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timer-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                        <div class="progress-milestones">
+                            <div class="milestone" data-cost="100">$100</div>
+                            <div class="milestone" data-cost="250">$250</div>
+                            <div class="milestone" data-cost="500">$500</div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="timer-controls">
-                    <button id="startBtn" class="btn btn-primary">Start</button>
-                    <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
-                    <button id="resetBtn" class="btn btn-tertiary">Reset</button>
+                    <button id="startBtn" class="btn btn-primary">
+                        <span class="btn-icon">▶️</span>
+                        <span class="btn-text">Start</span>
+                    </button>
+                    <button id="pauseBtn" class="btn btn-secondary" disabled>
+                        <span class="btn-icon">⏸️</span>
+                        <span class="btn-text">Pause</span>
+                    </button>
+                    <button id="resetBtn" class="btn btn-tertiary">
+                        <span class="btn-icon">🔄</span>
+                        <span class="btn-text">Reset</span>
+                    </button>
+                    <button id="exportBtn" class="btn btn-outline">
+                        <span class="btn-icon">📊</span>
+                        <span class="btn-text">Export</span>
+                    </button>
                 </div>
             </section>
 
