@@ -1,0 +1,49 @@
+{
+  "scenarios": [
+    {
+      "name": "Daily Standup",
+      "description": "Quick daily team sync",
+      "attendees": 8,
+      "hourlyRate": 65,
+      "duration": 15,
+      "overhead": 25,
+      "alertThreshold": 300
+    },
+    {
+      "name": "Sprint Planning",
+      "description": "Bi-weekly planning session",
+      "attendees": 6,
+      "hourlyRate": 85,
+      "duration": 120,
+      "overhead": 30,
+      "alertThreshold": 800
+    },
+    {
+      "name": "All-Hands Meeting",
+      "description": "Company-wide quarterly update",
+      "attendees": 50,
+      "hourlyRate": 75,
+      "duration": 60,
+      "overhead": 35,
+      "alertThreshold": 3000
+    },
+    {
+      "name": "Client Strategy Session",
+      "description": "High-level client consultation",
+      "attendees": 4,
+      "hourlyRate": 150,
+      "duration": 90,
+      "overhead": 20,
+      "alertThreshold": 1200
+    },
+    {
+      "name": "Executive Board Meeting",
+      "description": "C-level executive discussion",
+      "attendees": 8,
+      "hourlyRate": 300,
+      "duration": 180,
+      "overhead": 40,
+      "alertThreshold": 5000
+    }
+  ]
+}
