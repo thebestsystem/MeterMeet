@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeterMeet - Real-time Meeting Cost Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">MeterMeet</h1>
+            <p class="subtitle">Turn meeting time into clear numbers</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-group">
+                    <label for="attendees">Number of Attendees</label>
+                    <input type="number" id="attendees" value="5" min="1" max="100">
+                </div>
+
+                <div class="input-group">
+                    <label for="hourlyRate">Average Hourly Rate ($)</label>
+                    <input type="number" id="hourlyRate" value="75" min="1" step="0.01">
+                </div>
+
+                <div class="input-group">
+                    <label for="duration">Expected Duration (minutes)</label>
+                    <input type="number" id="duration" value="60" min="1" max="480">
+                </div>
+
+                <div class="input-group">
+                    <label for="overhead">Overhead (%)</label>
+                    <input type="number" id="overhead" value="20" min="0" max="100" step="0.1">
+                </div>
+
+                <div class="input-group">
+                    <label for="alertThreshold">Alert Threshold ($)</label>
+                    <input type="number" id="alertThreshold" value="500" min="1" step="0.01">
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section">
+                <div class="result-pill total-cost">
+                    <span class="result-label">Total Estimated Cost</span>
+                    <span class="result-value" id="totalCost">$0.00</span>
+                </div>
+
+                <div class="result-pill cost-per-minute">
+                    <span class="result-label">Cost per Minute</span>
+                    <span class="result-value" id="costPerMinute">$0.00</span>
+                </div>
+
+                <div class="result-pill cost-per-second">
+                    <span class="result-label">Cost per Second</span>
+                    <span class="result-value" id="costPerSecond">$0.00</span>
+                </div>
+            </section>
+
+            <!-- Timer Section -->
+            <section class="timer-section">
+                <div class="timer-display">
+                    <span class="timer-value" id="timerDisplay">00:00:00</span>
+                    <span class="timer-cost" id="timerCost">$0.00</span>
+                </div>
+
+                <div class="timer-controls">
+                    <button id="startBtn" class="btn btn-primary">Start</button>
+                    <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+                    <button id="resetBtn" class="btn btn-tertiary">Reset</button>
+                </div>
+            </section>
+
+            <!-- Alert Section -->
+            <div class="alert-container" id="alertContainer">
+                <div class="alert" id="alert">
+                    <span class="alert-icon">⚠️</span>
+                    <span class="alert-message" id="alertMessage">Meeting cost has exceeded your threshold!</span>
+                    <button class="alert-close" id="alertClose">×</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
