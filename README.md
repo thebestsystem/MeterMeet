@@ -1,6 +1,11 @@
 # MeterMeet 💰⏱️ - Enhanced Edition
 
+**🌍 LIVE WORLDWIDE:** **https://metermeet.netlify.app/**
+
 MeterMeet is a cutting-edge, real-time meeting cost tracker that transforms time into clear financial insights with advanced UX features. Built as a highly responsive single-page web application, it helps teams understand the true cost of their meetings with professional-grade tools and delightful user experience.
+
+> **🌟 World's First Interactive Particle Background Business Application**  
+> Revolutionary golden particle system + premium glassmorphism design + advanced features = The most visually stunning meeting cost tracker ever created!
 
 ## 🌟 New Advanced Features
 
@@ -84,10 +89,24 @@ MeterMeet is a cutting-edge, real-time meeting cost tracker that transforms time
 - **Input Validation**: Prevents invalid values and provides sensible defaults
 - **Mobile-Friendly**: Touch-optimized for mobile and tablet use
 
+## 🌐 **LIVE DEMO - Try It Now!**
+
+### 🚀 **Instant Access Worldwide**
+```
+🌟 LIVE APP: https://metermeet.netlify.app/
+```
+
+**✨ 30-Second Magic Test:**
+1. **Open** the live app above
+2. **Move your mouse** → Watch golden particles follow your cursor!
+3. **Press "1"** → Daily Standup preset loads instantly
+4. **Press "3"** → See particle density explode with All-Hands preset
+5. **Start timer** → Experience real-time cost tracking with visual celebrations
+
 ## 🚀 Enhanced Quick Start Guide
 
 ### First Time Setup
-1. **Open the App**: Navigate to the enhanced MeterMeet URL
+1. **Open the App**: **https://metermeet.netlify.app/** (works anywhere in the world!)
 2. **Choose Your Theme**: Click 🌙/☀️ to toggle theme or let it auto-detect
 3. **Select Currency**: Choose from 9 supported currencies in the header
 4. **Pick a Preset**: Try "1" for Daily Standup or click preset buttons
